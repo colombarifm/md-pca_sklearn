@@ -1,0 +1,50 @@
+# This file was created Wed Jul  9 14:04:07 2025
+# Created by:
+#                      :-) GROMACS - gmx covar, 2024.4 (-:
+# 
+# Executable:   /home/felippe/programas/gromacs-2024.4/gmx_2024.4/bin/gmx_mpi
+# Data prefix:  /home/felippe/programas/gromacs-2024.4/gmx_2024.4
+# Working dir:  /home/felippe/repos/MD_tools/PCA_sklearn/gmx_results/03_analysis
+# Command line:
+#   gmx_mpi covar -s ../02_nvt/nvt.tpr -f trj_fit.xtc -n ../files/index.ndx -o gmx_eigenvalues.xvg -v gmx_eigenvectors.trr -ascii gmx_covariancemtx.dat -xpm gmx_covariancemtx.xpm
+# gmx covar is part of G R O M A C S:
+#
+# Green Red Orange Magenta Azure Cyan Skyblue
+#
+@    title "Eigenvalues of the covariance matrix"
+@    xaxis  label "Eigenvector index"
+@    yaxis  label "(nm\S2\N)"
+@TYPE xy
+         1 0.000654119
+         2 0.000555546
+         3 0.000346129
+         4 0.000211611
+         5 0.000129605
+         6 8.69406e-05
+         7 5.97876e-05
+         8 5.30356e-05
+         9 4.09519e-05
+        10 3.50599e-05
+        11 2.67515e-05
+        12 2.40003e-05
+        13 2.07017e-05
+        14 1.40592e-05
+        15 1.13278e-05
+        16 1.04964e-05
+        17 1.00821e-05
+        18 8.62254e-06
+        19 6.13285e-06
+        20 5.20658e-06
+        21 4.66132e-06
+        22 4.30935e-06
+        23 4.01013e-06
+        24 2.90473e-06
+        25 2.51558e-06
+        26 1.92659e-06
+        27 1.78573e-06
+        28 3.84842e-11
+        29 1.70305e-11
+        30 8.11847e-12
+        31 -2.53609e-11
+        32 -3.56494e-11
+        33 -7.77491e-11

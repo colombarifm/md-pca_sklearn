@@ -1,0 +1,527 @@
+TITLE     frame t= 0.000
+REMARK    THIS IS A SIMULATION BOX
+CRYST1   40.000   40.000   40.000  90.00  90.00  90.00 P 1           1
+MODEL        1
+ATOM      1  N   ALA     1      -1.261   1.457  -0.755  1.00  0.00           N
+ATOM      5  CA  ALA     1      -1.681   0.355   0.152  1.00  0.00           C
+ATOM      7  CB  ALA     1      -2.095  -0.869  -0.691  1.00  0.00           C
+ATOM     11  C   ALA     1      -0.774  -0.003   1.344  1.00  0.00           C
+ATOM     12  O   ALA     1      -1.228   0.157   2.463  1.00  0.00           O
+ATOM     13  N   ALA     2       0.480  -0.499   1.260  1.00  0.00           N
+ATOM     15  CA  ALA     2       1.447  -0.629   0.181  1.00  0.00           C
+ATOM     17  CB  ALA     2       1.539  -2.075  -0.328  1.00  0.00           C
+ATOM     21  C   ALA     2       1.302   0.409  -0.946  1.00  0.00           C
+ATOM     22  OT1 ALA     2       0.806   0.086  -2.045  1.00  0.00           O
+ATOM     23  OT2 ALA     2       1.466   1.610  -0.634  1.00  0.00           O
+TER
+ENDMDL
+TITLE     frame t= 1.000
+REMARK    THIS IS A SIMULATION BOX
+CRYST1   40.000   40.000   40.000  90.00  90.00  90.00 P 1           1
+MODEL        1
+ATOM      1  N   ALA     1      -1.261   1.457  -0.755  1.00  0.00           N
+ATOM      5  CA  ALA     1      -1.681   0.355   0.152  1.00  0.00           C
+ATOM      7  CB  ALA     1      -2.095  -0.869  -0.691  1.00  0.00           C
+ATOM     11  C   ALA     1      -0.774  -0.003   1.344  1.00  0.00           C
+ATOM     12  O   ALA     1      -1.228   0.157   2.463  1.00  0.00           O
+ATOM     13  N   ALA     2       0.480  -0.499   1.260  1.00  0.00           N
+ATOM     15  CA  ALA     2       1.447  -0.629   0.181  1.00  0.00           C
+ATOM     17  CB  ALA     2       1.539  -2.075  -0.328  1.00  0.00           C
+ATOM     21  C   ALA     2       1.302   0.409  -0.946  1.00  0.00           C
+ATOM     22  OT1 ALA     2       0.806   0.086  -2.045  1.00  0.00           O
+ATOM     23  OT2 ALA     2       1.466   1.610  -0.634  1.00  0.00           O
+TER
+ENDMDL
+TITLE     frame t= 2.000
+REMARK    THIS IS A SIMULATION BOX
+CRYST1   40.000   40.000   40.000  90.00  90.00  90.00 P 1           1
+MODEL        1
+ATOM      1  N   ALA     1      -1.261   1.457  -0.755  1.00  0.00           N
+ATOM      5  CA  ALA     1      -1.681   0.355   0.152  1.00  0.00           C
+ATOM      7  CB  ALA     1      -2.095  -0.869  -0.691  1.00  0.00           C
+ATOM     11  C   ALA     1      -0.774  -0.003   1.344  1.00  0.00           C
+ATOM     12  O   ALA     1      -1.228   0.157   2.463  1.00  0.00           O
+ATOM     13  N   ALA     2       0.480  -0.499   1.260  1.00  0.00           N
+ATOM     15  CA  ALA     2       1.447  -0.629   0.181  1.00  0.00           C
+ATOM     17  CB  ALA     2       1.539  -2.075  -0.328  1.00  0.00           C
+ATOM     21  C   ALA     2       1.302   0.409  -0.946  1.00  0.00           C
+ATOM     22  OT1 ALA     2       0.806   0.086  -2.045  1.00  0.00           O
+ATOM     23  OT2 ALA     2       1.466   1.610  -0.634  1.00  0.00           O
+TER
+ENDMDL
+TITLE     frame t= 3.000
+REMARK    THIS IS A SIMULATION BOX
+CRYST1   40.000   40.000   40.000  90.00  90.00  90.00 P 1           1
+MODEL        1
+ATOM      1  N   ALA     1      -1.261   1.457  -0.755  1.00  0.00           N
+ATOM      5  CA  ALA     1      -1.681   0.355   0.152  1.00  0.00           C
+ATOM      7  CB  ALA     1      -2.095  -0.869  -0.691  1.00  0.00           C
+ATOM     11  C   ALA     1      -0.774  -0.003   1.344  1.00  0.00           C
+ATOM     12  O   ALA     1      -1.228   0.157   2.463  1.00  0.00           O
+ATOM     13  N   ALA     2       0.480  -0.499   1.260  1.00  0.00           N
+ATOM     15  CA  ALA     2       1.447  -0.629   0.181  1.00  0.00           C
+ATOM     17  CB  ALA     2       1.539  -2.075  -0.328  1.00  0.00           C
+ATOM     21  C   ALA     2       1.302   0.409  -0.946  1.00  0.00           C
+ATOM     22  OT1 ALA     2       0.806   0.086  -2.045  1.00  0.00           O
+ATOM     23  OT2 ALA     2       1.466   1.610  -0.634  1.00  0.00           O
+TER
+ENDMDL
+TITLE     frame t= 4.000
+REMARK    THIS IS A SIMULATION BOX
+CRYST1   40.000   40.000   40.000  90.00  90.00  90.00 P 1           1
+MODEL        1
+ATOM      1  N   ALA     1      -1.261   1.457  -0.755  1.00  0.00           N
+ATOM      5  CA  ALA     1      -1.681   0.355   0.152  1.00  0.00           C
+ATOM      7  CB  ALA     1      -2.095  -0.869  -0.691  1.00  0.00           C
+ATOM     11  C   ALA     1      -0.774  -0.003   1.344  1.00  0.00           C
+ATOM     12  O   ALA     1      -1.228   0.157   2.463  1.00  0.00           O
+ATOM     13  N   ALA     2       0.480  -0.499   1.260  1.00  0.00           N
+ATOM     15  CA  ALA     2       1.447  -0.629   0.181  1.00  0.00           C
+ATOM     17  CB  ALA     2       1.539  -2.075  -0.328  1.00  0.00           C
+ATOM     21  C   ALA     2       1.302   0.409  -0.946  1.00  0.00           C
+ATOM     22  OT1 ALA     2       0.806   0.086  -2.045  1.00  0.00           O
+ATOM     23  OT2 ALA     2       1.466   1.610  -0.634  1.00  0.00           O
+TER
+ENDMDL
+TITLE     frame t= 5.000
+REMARK    THIS IS A SIMULATION BOX
+CRYST1   40.000   40.000   40.000  90.00  90.00  90.00 P 1           1
+MODEL        1
+ATOM      1  N   ALA     1      -1.261   1.457  -0.755  1.00  0.00           N
+ATOM      5  CA  ALA     1      -1.681   0.355   0.152  1.00  0.00           C
+ATOM      7  CB  ALA     1      -2.095  -0.869  -0.691  1.00  0.00           C
+ATOM     11  C   ALA     1      -0.774  -0.003   1.344  1.00  0.00           C
+ATOM     12  O   ALA     1      -1.228   0.157   2.463  1.00  0.00           O
+ATOM     13  N   ALA     2       0.480  -0.499   1.260  1.00  0.00           N
+ATOM     15  CA  ALA     2       1.447  -0.629   0.181  1.00  0.00           C
+ATOM     17  CB  ALA     2       1.539  -2.075  -0.328  1.00  0.00           C
+ATOM     21  C   ALA     2       1.302   0.409  -0.946  1.00  0.00           C
+ATOM     22  OT1 ALA     2       0.806   0.086  -2.045  1.00  0.00           O
+ATOM     23  OT2 ALA     2       1.466   1.610  -0.634  1.00  0.00           O
+TER
+ENDMDL
+TITLE     frame t= 6.000
+REMARK    THIS IS A SIMULATION BOX
+CRYST1   40.000   40.000   40.000  90.00  90.00  90.00 P 1           1
+MODEL        1
+ATOM      1  N   ALA     1      -1.261   1.457  -0.755  1.00  0.00           N
+ATOM      5  CA  ALA     1      -1.681   0.355   0.152  1.00  0.00           C
+ATOM      7  CB  ALA     1      -2.095  -0.869  -0.691  1.00  0.00           C
+ATOM     11  C   ALA     1      -0.774  -0.003   1.344  1.00  0.00           C
+ATOM     12  O   ALA     1      -1.228   0.157   2.463  1.00  0.00           O
+ATOM     13  N   ALA     2       0.480  -0.499   1.260  1.00  0.00           N
+ATOM     15  CA  ALA     2       1.447  -0.629   0.181  1.00  0.00           C
+ATOM     17  CB  ALA     2       1.539  -2.075  -0.328  1.00  0.00           C
+ATOM     21  C   ALA     2       1.302   0.409  -0.946  1.00  0.00           C
+ATOM     22  OT1 ALA     2       0.806   0.086  -2.045  1.00  0.00           O
+ATOM     23  OT2 ALA     2       1.466   1.610  -0.634  1.00  0.00           O
+TER
+ENDMDL
+TITLE     frame t= 7.000
+REMARK    THIS IS A SIMULATION BOX
+CRYST1   40.000   40.000   40.000  90.00  90.00  90.00 P 1           1
+MODEL        1
+ATOM      1  N   ALA     1      -1.261   1.457  -0.755  1.00  0.00           N
+ATOM      5  CA  ALA     1      -1.681   0.355   0.152  1.00  0.00           C
+ATOM      7  CB  ALA     1      -2.095  -0.869  -0.691  1.00  0.00           C
+ATOM     11  C   ALA     1      -0.774  -0.003   1.344  1.00  0.00           C
+ATOM     12  O   ALA     1      -1.228   0.157   2.463  1.00  0.00           O
+ATOM     13  N   ALA     2       0.480  -0.499   1.260  1.00  0.00           N
+ATOM     15  CA  ALA     2       1.447  -0.629   0.181  1.00  0.00           C
+ATOM     17  CB  ALA     2       1.539  -2.075  -0.328  1.00  0.00           C
+ATOM     21  C   ALA     2       1.302   0.409  -0.946  1.00  0.00           C
+ATOM     22  OT1 ALA     2       0.806   0.086  -2.045  1.00  0.00           O
+ATOM     23  OT2 ALA     2       1.466   1.610  -0.634  1.00  0.00           O
+TER
+ENDMDL
+TITLE     frame t= 8.000
+REMARK    THIS IS A SIMULATION BOX
+CRYST1   40.000   40.000   40.000  90.00  90.00  90.00 P 1           1
+MODEL        1
+ATOM      1  N   ALA     1      -1.261   1.457  -0.755  1.00  0.00           N
+ATOM      5  CA  ALA     1      -1.681   0.355   0.152  1.00  0.00           C
+ATOM      7  CB  ALA     1      -2.095  -0.869  -0.691  1.00  0.00           C
+ATOM     11  C   ALA     1      -0.774  -0.003   1.344  1.00  0.00           C
+ATOM     12  O   ALA     1      -1.228   0.157   2.463  1.00  0.00           O
+ATOM     13  N   ALA     2       0.480  -0.499   1.260  1.00  0.00           N
+ATOM     15  CA  ALA     2       1.447  -0.629   0.181  1.00  0.00           C
+ATOM     17  CB  ALA     2       1.539  -2.075  -0.328  1.00  0.00           C
+ATOM     21  C   ALA     2       1.302   0.409  -0.946  1.00  0.00           C
+ATOM     22  OT1 ALA     2       0.806   0.086  -2.045  1.00  0.00           O
+ATOM     23  OT2 ALA     2       1.466   1.610  -0.634  1.00  0.00           O
+TER
+ENDMDL
+TITLE     frame t= 9.000
+REMARK    THIS IS A SIMULATION BOX
+CRYST1   40.000   40.000   40.000  90.00  90.00  90.00 P 1           1
+MODEL        1
+ATOM      1  N   ALA     1      -1.261   1.457  -0.755  1.00  0.00           N
+ATOM      5  CA  ALA     1      -1.681   0.355   0.152  1.00  0.00           C
+ATOM      7  CB  ALA     1      -2.095  -0.869  -0.691  1.00  0.00           C
+ATOM     11  C   ALA     1      -0.774  -0.003   1.344  1.00  0.00           C
+ATOM     12  O   ALA     1      -1.228   0.157   2.463  1.00  0.00           O
+ATOM     13  N   ALA     2       0.480  -0.499   1.260  1.00  0.00           N
+ATOM     15  CA  ALA     2       1.447  -0.629   0.181  1.00  0.00           C
+ATOM     17  CB  ALA     2       1.539  -2.075  -0.328  1.00  0.00           C
+ATOM     21  C   ALA     2       1.302   0.409  -0.946  1.00  0.00           C
+ATOM     22  OT1 ALA     2       0.806   0.086  -2.045  1.00  0.00           O
+ATOM     23  OT2 ALA     2       1.466   1.610  -0.634  1.00  0.00           O
+TER
+ENDMDL
+TITLE     frame t= 10.000
+REMARK    THIS IS A SIMULATION BOX
+CRYST1   40.000   40.000   40.000  90.00  90.00  90.00 P 1           1
+MODEL        1
+ATOM      1  N   ALA     1      -1.261   1.457  -0.755  1.00  0.00           N
+ATOM      5  CA  ALA     1      -1.681   0.355   0.152  1.00  0.00           C
+ATOM      7  CB  ALA     1      -2.095  -0.869  -0.691  1.00  0.00           C
+ATOM     11  C   ALA     1      -0.774  -0.003   1.344  1.00  0.00           C
+ATOM     12  O   ALA     1      -1.228   0.157   2.463  1.00  0.00           O
+ATOM     13  N   ALA     2       0.480  -0.499   1.260  1.00  0.00           N
+ATOM     15  CA  ALA     2       1.447  -0.629   0.181  1.00  0.00           C
+ATOM     17  CB  ALA     2       1.539  -2.075  -0.328  1.00  0.00           C
+ATOM     21  C   ALA     2       1.302   0.409  -0.946  1.00  0.00           C
+ATOM     22  OT1 ALA     2       0.806   0.086  -2.045  1.00  0.00           O
+ATOM     23  OT2 ALA     2       1.466   1.610  -0.634  1.00  0.00           O
+TER
+ENDMDL
+TITLE     frame t= 11.000
+REMARK    THIS IS A SIMULATION BOX
+CRYST1   40.000   40.000   40.000  90.00  90.00  90.00 P 1           1
+MODEL        1
+ATOM      1  N   ALA     1      -1.261   1.457  -0.755  1.00  0.00           N
+ATOM      5  CA  ALA     1      -1.681   0.355   0.152  1.00  0.00           C
+ATOM      7  CB  ALA     1      -2.095  -0.869  -0.691  1.00  0.00           C
+ATOM     11  C   ALA     1      -0.774  -0.003   1.344  1.00  0.00           C
+ATOM     12  O   ALA     1      -1.228   0.157   2.463  1.00  0.00           O
+ATOM     13  N   ALA     2       0.480  -0.499   1.260  1.00  0.00           N
+ATOM     15  CA  ALA     2       1.447  -0.629   0.181  1.00  0.00           C
+ATOM     17  CB  ALA     2       1.539  -2.075  -0.328  1.00  0.00           C
+ATOM     21  C   ALA     2       1.302   0.409  -0.946  1.00  0.00           C
+ATOM     22  OT1 ALA     2       0.806   0.086  -2.045  1.00  0.00           O
+ATOM     23  OT2 ALA     2       1.466   1.610  -0.634  1.00  0.00           O
+TER
+ENDMDL
+TITLE     frame t= 12.000
+REMARK    THIS IS A SIMULATION BOX
+CRYST1   40.000   40.000   40.000  90.00  90.00  90.00 P 1           1
+MODEL        1
+ATOM      1  N   ALA     1      -1.261   1.457  -0.755  1.00  0.00           N
+ATOM      5  CA  ALA     1      -1.681   0.355   0.152  1.00  0.00           C
+ATOM      7  CB  ALA     1      -2.095  -0.869  -0.691  1.00  0.00           C
+ATOM     11  C   ALA     1      -0.774  -0.003   1.344  1.00  0.00           C
+ATOM     12  O   ALA     1      -1.228   0.157   2.463  1.00  0.00           O
+ATOM     13  N   ALA     2       0.480  -0.499   1.260  1.00  0.00           N
+ATOM     15  CA  ALA     2       1.447  -0.629   0.181  1.00  0.00           C
+ATOM     17  CB  ALA     2       1.539  -2.075  -0.328  1.00  0.00           C
+ATOM     21  C   ALA     2       1.302   0.409  -0.946  1.00  0.00           C
+ATOM     22  OT1 ALA     2       0.806   0.086  -2.045  1.00  0.00           O
+ATOM     23  OT2 ALA     2       1.466   1.610  -0.634  1.00  0.00           O
+TER
+ENDMDL
+TITLE     frame t= 13.000
+REMARK    THIS IS A SIMULATION BOX
+CRYST1   40.000   40.000   40.000  90.00  90.00  90.00 P 1           1
+MODEL        1
+ATOM      1  N   ALA     1      -1.261   1.457  -0.755  1.00  0.00           N
+ATOM      5  CA  ALA     1      -1.681   0.355   0.152  1.00  0.00           C
+ATOM      7  CB  ALA     1      -2.095  -0.869  -0.691  1.00  0.00           C
+ATOM     11  C   ALA     1      -0.774  -0.003   1.344  1.00  0.00           C
+ATOM     12  O   ALA     1      -1.228   0.157   2.463  1.00  0.00           O
+ATOM     13  N   ALA     2       0.480  -0.499   1.260  1.00  0.00           N
+ATOM     15  CA  ALA     2       1.447  -0.629   0.181  1.00  0.00           C
+ATOM     17  CB  ALA     2       1.539  -2.075  -0.328  1.00  0.00           C
+ATOM     21  C   ALA     2       1.302   0.409  -0.946  1.00  0.00           C
+ATOM     22  OT1 ALA     2       0.806   0.086  -2.045  1.00  0.00           O
+ATOM     23  OT2 ALA     2       1.466   1.610  -0.634  1.00  0.00           O
+TER
+ENDMDL
+TITLE     frame t= 14.000
+REMARK    THIS IS A SIMULATION BOX
+CRYST1   40.000   40.000   40.000  90.00  90.00  90.00 P 1           1
+MODEL        1
+ATOM      1  N   ALA     1      -1.261   1.457  -0.755  1.00  0.00           N
+ATOM      5  CA  ALA     1      -1.681   0.355   0.152  1.00  0.00           C
+ATOM      7  CB  ALA     1      -2.095  -0.869  -0.691  1.00  0.00           C
+ATOM     11  C   ALA     1      -0.774  -0.003   1.344  1.00  0.00           C
+ATOM     12  O   ALA     1      -1.228   0.157   2.463  1.00  0.00           O
+ATOM     13  N   ALA     2       0.480  -0.499   1.260  1.00  0.00           N
+ATOM     15  CA  ALA     2       1.447  -0.629   0.181  1.00  0.00           C
+ATOM     17  CB  ALA     2       1.539  -2.075  -0.328  1.00  0.00           C
+ATOM     21  C   ALA     2       1.302   0.409  -0.946  1.00  0.00           C
+ATOM     22  OT1 ALA     2       0.806   0.086  -2.045  1.00  0.00           O
+ATOM     23  OT2 ALA     2       1.466   1.610  -0.634  1.00  0.00           O
+TER
+ENDMDL
+TITLE     frame t= 15.000
+REMARK    THIS IS A SIMULATION BOX
+CRYST1   40.000   40.000   40.000  90.00  90.00  90.00 P 1           1
+MODEL        1
+ATOM      1  N   ALA     1      -1.261   1.457  -0.755  1.00  0.00           N
+ATOM      5  CA  ALA     1      -1.681   0.355   0.152  1.00  0.00           C
+ATOM      7  CB  ALA     1      -2.095  -0.869  -0.691  1.00  0.00           C
+ATOM     11  C   ALA     1      -0.774  -0.003   1.344  1.00  0.00           C
+ATOM     12  O   ALA     1      -1.228   0.157   2.463  1.00  0.00           O
+ATOM     13  N   ALA     2       0.480  -0.499   1.260  1.00  0.00           N
+ATOM     15  CA  ALA     2       1.447  -0.629   0.181  1.00  0.00           C
+ATOM     17  CB  ALA     2       1.539  -2.075  -0.328  1.00  0.00           C
+ATOM     21  C   ALA     2       1.302   0.409  -0.946  1.00  0.00           C
+ATOM     22  OT1 ALA     2       0.806   0.086  -2.045  1.00  0.00           O
+ATOM     23  OT2 ALA     2       1.466   1.610  -0.634  1.00  0.00           O
+TER
+ENDMDL
+TITLE     frame t= 16.000
+REMARK    THIS IS A SIMULATION BOX
+CRYST1   40.000   40.000   40.000  90.00  90.00  90.00 P 1           1
+MODEL        1
+ATOM      1  N   ALA     1      -1.261   1.457  -0.755  1.00  0.00           N
+ATOM      5  CA  ALA     1      -1.681   0.355   0.152  1.00  0.00           C
+ATOM      7  CB  ALA     1      -2.095  -0.869  -0.691  1.00  0.00           C
+ATOM     11  C   ALA     1      -0.774  -0.003   1.344  1.00  0.00           C
+ATOM     12  O   ALA     1      -1.228   0.157   2.463  1.00  0.00           O
+ATOM     13  N   ALA     2       0.480  -0.499   1.260  1.00  0.00           N
+ATOM     15  CA  ALA     2       1.447  -0.629   0.181  1.00  0.00           C
+ATOM     17  CB  ALA     2       1.539  -2.075  -0.328  1.00  0.00           C
+ATOM     21  C   ALA     2       1.302   0.409  -0.946  1.00  0.00           C
+ATOM     22  OT1 ALA     2       0.806   0.086  -2.045  1.00  0.00           O
+ATOM     23  OT2 ALA     2       1.466   1.610  -0.634  1.00  0.00           O
+TER
+ENDMDL
+TITLE     frame t= 17.000
+REMARK    THIS IS A SIMULATION BOX
+CRYST1   40.000   40.000   40.000  90.00  90.00  90.00 P 1           1
+MODEL        1
+ATOM      1  N   ALA     1      -1.261   1.457  -0.755  1.00  0.00           N
+ATOM      5  CA  ALA     1      -1.681   0.355   0.152  1.00  0.00           C
+ATOM      7  CB  ALA     1      -2.095  -0.869  -0.691  1.00  0.00           C
+ATOM     11  C   ALA     1      -0.774  -0.003   1.344  1.00  0.00           C
+ATOM     12  O   ALA     1      -1.228   0.157   2.463  1.00  0.00           O
+ATOM     13  N   ALA     2       0.480  -0.499   1.260  1.00  0.00           N
+ATOM     15  CA  ALA     2       1.447  -0.629   0.181  1.00  0.00           C
+ATOM     17  CB  ALA     2       1.539  -2.075  -0.328  1.00  0.00           C
+ATOM     21  C   ALA     2       1.302   0.409  -0.946  1.00  0.00           C
+ATOM     22  OT1 ALA     2       0.806   0.086  -2.045  1.00  0.00           O
+ATOM     23  OT2 ALA     2       1.466   1.610  -0.634  1.00  0.00           O
+TER
+ENDMDL
+TITLE     frame t= 18.000
+REMARK    THIS IS A SIMULATION BOX
+CRYST1   40.000   40.000   40.000  90.00  90.00  90.00 P 1           1
+MODEL        1
+ATOM      1  N   ALA     1      -1.261   1.457  -0.755  1.00  0.00           N
+ATOM      5  CA  ALA     1      -1.681   0.355   0.152  1.00  0.00           C
+ATOM      7  CB  ALA     1      -2.095  -0.869  -0.691  1.00  0.00           C
+ATOM     11  C   ALA     1      -0.774  -0.003   1.344  1.00  0.00           C
+ATOM     12  O   ALA     1      -1.228   0.157   2.463  1.00  0.00           O
+ATOM     13  N   ALA     2       0.480  -0.499   1.260  1.00  0.00           N
+ATOM     15  CA  ALA     2       1.447  -0.629   0.181  1.00  0.00           C
+ATOM     17  CB  ALA     2       1.539  -2.075  -0.328  1.00  0.00           C
+ATOM     21  C   ALA     2       1.302   0.409  -0.946  1.00  0.00           C
+ATOM     22  OT1 ALA     2       0.806   0.086  -2.045  1.00  0.00           O
+ATOM     23  OT2 ALA     2       1.466   1.610  -0.634  1.00  0.00           O
+TER
+ENDMDL
+TITLE     frame t= 19.000
+REMARK    THIS IS A SIMULATION BOX
+CRYST1   40.000   40.000   40.000  90.00  90.00  90.00 P 1           1
+MODEL        1
+ATOM      1  N   ALA     1      -1.261   1.457  -0.755  1.00  0.00           N
+ATOM      5  CA  ALA     1      -1.681   0.355   0.152  1.00  0.00           C
+ATOM      7  CB  ALA     1      -2.095  -0.869  -0.691  1.00  0.00           C
+ATOM     11  C   ALA     1      -0.774  -0.003   1.344  1.00  0.00           C
+ATOM     12  O   ALA     1      -1.228   0.157   2.463  1.00  0.00           O
+ATOM     13  N   ALA     2       0.480  -0.499   1.260  1.00  0.00           N
+ATOM     15  CA  ALA     2       1.447  -0.629   0.181  1.00  0.00           C
+ATOM     17  CB  ALA     2       1.539  -2.075  -0.328  1.00  0.00           C
+ATOM     21  C   ALA     2       1.302   0.409  -0.946  1.00  0.00           C
+ATOM     22  OT1 ALA     2       0.806   0.086  -2.045  1.00  0.00           O
+ATOM     23  OT2 ALA     2       1.466   1.610  -0.634  1.00  0.00           O
+TER
+ENDMDL
+TITLE     frame t= 20.000
+REMARK    THIS IS A SIMULATION BOX
+CRYST1   40.000   40.000   40.000  90.00  90.00  90.00 P 1           1
+MODEL        1
+ATOM      1  N   ALA     1      -1.261   1.457  -0.755  1.00  0.00           N
+ATOM      5  CA  ALA     1      -1.681   0.355   0.152  1.00  0.00           C
+ATOM      7  CB  ALA     1      -2.095  -0.869  -0.691  1.00  0.00           C
+ATOM     11  C   ALA     1      -0.774  -0.003   1.344  1.00  0.00           C
+ATOM     12  O   ALA     1      -1.228   0.157   2.463  1.00  0.00           O
+ATOM     13  N   ALA     2       0.480  -0.499   1.260  1.00  0.00           N
+ATOM     15  CA  ALA     2       1.447  -0.629   0.181  1.00  0.00           C
+ATOM     17  CB  ALA     2       1.539  -2.075  -0.328  1.00  0.00           C
+ATOM     21  C   ALA     2       1.302   0.409  -0.946  1.00  0.00           C
+ATOM     22  OT1 ALA     2       0.806   0.086  -2.045  1.00  0.00           O
+ATOM     23  OT2 ALA     2       1.466   1.610  -0.634  1.00  0.00           O
+TER
+ENDMDL
+TITLE     frame t= 21.000
+REMARK    THIS IS A SIMULATION BOX
+CRYST1   40.000   40.000   40.000  90.00  90.00  90.00 P 1           1
+MODEL        1
+ATOM      1  N   ALA     1      -1.261   1.457  -0.755  1.00  0.00           N
+ATOM      5  CA  ALA     1      -1.681   0.355   0.152  1.00  0.00           C
+ATOM      7  CB  ALA     1      -2.095  -0.869  -0.691  1.00  0.00           C
+ATOM     11  C   ALA     1      -0.774  -0.003   1.344  1.00  0.00           C
+ATOM     12  O   ALA     1      -1.228   0.157   2.463  1.00  0.00           O
+ATOM     13  N   ALA     2       0.480  -0.499   1.260  1.00  0.00           N
+ATOM     15  CA  ALA     2       1.447  -0.629   0.181  1.00  0.00           C
+ATOM     17  CB  ALA     2       1.539  -2.075  -0.328  1.00  0.00           C
+ATOM     21  C   ALA     2       1.302   0.409  -0.946  1.00  0.00           C
+ATOM     22  OT1 ALA     2       0.806   0.086  -2.045  1.00  0.00           O
+ATOM     23  OT2 ALA     2       1.466   1.610  -0.634  1.00  0.00           O
+TER
+ENDMDL
+TITLE     frame t= 22.000
+REMARK    THIS IS A SIMULATION BOX
+CRYST1   40.000   40.000   40.000  90.00  90.00  90.00 P 1           1
+MODEL        1
+ATOM      1  N   ALA     1      -1.261   1.457  -0.755  1.00  0.00           N
+ATOM      5  CA  ALA     1      -1.681   0.355   0.152  1.00  0.00           C
+ATOM      7  CB  ALA     1      -2.095  -0.869  -0.691  1.00  0.00           C
+ATOM     11  C   ALA     1      -0.774  -0.003   1.344  1.00  0.00           C
+ATOM     12  O   ALA     1      -1.228   0.157   2.463  1.00  0.00           O
+ATOM     13  N   ALA     2       0.480  -0.499   1.260  1.00  0.00           N
+ATOM     15  CA  ALA     2       1.447  -0.629   0.181  1.00  0.00           C
+ATOM     17  CB  ALA     2       1.539  -2.075  -0.328  1.00  0.00           C
+ATOM     21  C   ALA     2       1.302   0.409  -0.946  1.00  0.00           C
+ATOM     22  OT1 ALA     2       0.806   0.086  -2.045  1.00  0.00           O
+ATOM     23  OT2 ALA     2       1.466   1.610  -0.634  1.00  0.00           O
+TER
+ENDMDL
+TITLE     frame t= 23.000
+REMARK    THIS IS A SIMULATION BOX
+CRYST1   40.000   40.000   40.000  90.00  90.00  90.00 P 1           1
+MODEL        1
+ATOM      1  N   ALA     1      -1.261   1.457  -0.755  1.00  0.00           N
+ATOM      5  CA  ALA     1      -1.681   0.355   0.152  1.00  0.00           C
+ATOM      7  CB  ALA     1      -2.095  -0.869  -0.691  1.00  0.00           C
+ATOM     11  C   ALA     1      -0.774  -0.003   1.344  1.00  0.00           C
+ATOM     12  O   ALA     1      -1.228   0.157   2.463  1.00  0.00           O
+ATOM     13  N   ALA     2       0.480  -0.499   1.260  1.00  0.00           N
+ATOM     15  CA  ALA     2       1.447  -0.629   0.181  1.00  0.00           C
+ATOM     17  CB  ALA     2       1.539  -2.075  -0.328  1.00  0.00           C
+ATOM     21  C   ALA     2       1.302   0.409  -0.946  1.00  0.00           C
+ATOM     22  OT1 ALA     2       0.806   0.086  -2.045  1.00  0.00           O
+ATOM     23  OT2 ALA     2       1.466   1.610  -0.634  1.00  0.00           O
+TER
+ENDMDL
+TITLE     frame t= 24.000
+REMARK    THIS IS A SIMULATION BOX
+CRYST1   40.000   40.000   40.000  90.00  90.00  90.00 P 1           1
+MODEL        1
+ATOM      1  N   ALA     1      -1.261   1.457  -0.755  1.00  0.00           N
+ATOM      5  CA  ALA     1      -1.681   0.355   0.152  1.00  0.00           C
+ATOM      7  CB  ALA     1      -2.095  -0.869  -0.691  1.00  0.00           C
+ATOM     11  C   ALA     1      -0.774  -0.003   1.344  1.00  0.00           C
+ATOM     12  O   ALA     1      -1.228   0.157   2.463  1.00  0.00           O
+ATOM     13  N   ALA     2       0.480  -0.499   1.260  1.00  0.00           N
+ATOM     15  CA  ALA     2       1.447  -0.629   0.181  1.00  0.00           C
+ATOM     17  CB  ALA     2       1.539  -2.075  -0.328  1.00  0.00           C
+ATOM     21  C   ALA     2       1.302   0.409  -0.946  1.00  0.00           C
+ATOM     22  OT1 ALA     2       0.806   0.086  -2.045  1.00  0.00           O
+ATOM     23  OT2 ALA     2       1.466   1.610  -0.634  1.00  0.00           O
+TER
+ENDMDL
+TITLE     frame t= 25.000
+REMARK    THIS IS A SIMULATION BOX
+CRYST1   40.000   40.000   40.000  90.00  90.00  90.00 P 1           1
+MODEL        1
+ATOM      1  N   ALA     1      -1.261   1.457  -0.755  1.00  0.00           N
+ATOM      5  CA  ALA     1      -1.681   0.355   0.152  1.00  0.00           C
+ATOM      7  CB  ALA     1      -2.095  -0.869  -0.691  1.00  0.00           C
+ATOM     11  C   ALA     1      -0.774  -0.003   1.344  1.00  0.00           C
+ATOM     12  O   ALA     1      -1.228   0.157   2.463  1.00  0.00           O
+ATOM     13  N   ALA     2       0.480  -0.499   1.260  1.00  0.00           N
+ATOM     15  CA  ALA     2       1.447  -0.629   0.181  1.00  0.00           C
+ATOM     17  CB  ALA     2       1.539  -2.075  -0.328  1.00  0.00           C
+ATOM     21  C   ALA     2       1.302   0.409  -0.946  1.00  0.00           C
+ATOM     22  OT1 ALA     2       0.806   0.086  -2.045  1.00  0.00           O
+ATOM     23  OT2 ALA     2       1.466   1.610  -0.634  1.00  0.00           O
+TER
+ENDMDL
+TITLE     frame t= 26.000
+REMARK    THIS IS A SIMULATION BOX
+CRYST1   40.000   40.000   40.000  90.00  90.00  90.00 P 1           1
+MODEL        1
+ATOM      1  N   ALA     1      -1.261   1.457  -0.755  1.00  0.00           N
+ATOM      5  CA  ALA     1      -1.681   0.355   0.152  1.00  0.00           C
+ATOM      7  CB  ALA     1      -2.095  -0.869  -0.691  1.00  0.00           C
+ATOM     11  C   ALA     1      -0.774  -0.003   1.344  1.00  0.00           C
+ATOM     12  O   ALA     1      -1.228   0.157   2.463  1.00  0.00           O
+ATOM     13  N   ALA     2       0.480  -0.499   1.260  1.00  0.00           N
+ATOM     15  CA  ALA     2       1.447  -0.629   0.181  1.00  0.00           C
+ATOM     17  CB  ALA     2       1.539  -2.075  -0.328  1.00  0.00           C
+ATOM     21  C   ALA     2       1.302   0.409  -0.946  1.00  0.00           C
+ATOM     22  OT1 ALA     2       0.806   0.086  -2.045  1.00  0.00           O
+ATOM     23  OT2 ALA     2       1.466   1.610  -0.634  1.00  0.00           O
+TER
+ENDMDL
+TITLE     frame t= 27.000
+REMARK    THIS IS A SIMULATION BOX
+CRYST1   40.000   40.000   40.000  90.00  90.00  90.00 P 1           1
+MODEL        1
+ATOM      1  N   ALA     1      -1.261   1.457  -0.755  1.00  0.00           N
+ATOM      5  CA  ALA     1      -1.681   0.355   0.152  1.00  0.00           C
+ATOM      7  CB  ALA     1      -2.095  -0.869  -0.691  1.00  0.00           C
+ATOM     11  C   ALA     1      -0.774  -0.003   1.344  1.00  0.00           C
+ATOM     12  O   ALA     1      -1.228   0.157   2.463  1.00  0.00           O
+ATOM     13  N   ALA     2       0.480  -0.499   1.260  1.00  0.00           N
+ATOM     15  CA  ALA     2       1.447  -0.629   0.181  1.00  0.00           C
+ATOM     17  CB  ALA     2       1.539  -2.075  -0.328  1.00  0.00           C
+ATOM     21  C   ALA     2       1.302   0.409  -0.946  1.00  0.00           C
+ATOM     22  OT1 ALA     2       0.806   0.086  -2.045  1.00  0.00           O
+ATOM     23  OT2 ALA     2       1.466   1.610  -0.634  1.00  0.00           O
+TER
+ENDMDL
+TITLE     frame t= 28.000
+REMARK    THIS IS A SIMULATION BOX
+CRYST1   40.000   40.000   40.000  90.00  90.00  90.00 P 1           1
+MODEL        1
+ATOM      1  N   ALA     1      -1.261   1.457  -0.755  1.00  0.00           N
+ATOM      5  CA  ALA     1      -1.681   0.355   0.152  1.00  0.00           C
+ATOM      7  CB  ALA     1      -2.095  -0.869  -0.691  1.00  0.00           C
+ATOM     11  C   ALA     1      -0.774  -0.003   1.344  1.00  0.00           C
+ATOM     12  O   ALA     1      -1.228   0.157   2.463  1.00  0.00           O
+ATOM     13  N   ALA     2       0.480  -0.499   1.260  1.00  0.00           N
+ATOM     15  CA  ALA     2       1.447  -0.629   0.181  1.00  0.00           C
+ATOM     17  CB  ALA     2       1.539  -2.075  -0.328  1.00  0.00           C
+ATOM     21  C   ALA     2       1.302   0.409  -0.946  1.00  0.00           C
+ATOM     22  OT1 ALA     2       0.806   0.086  -2.045  1.00  0.00           O
+ATOM     23  OT2 ALA     2       1.466   1.610  -0.634  1.00  0.00           O
+TER
+ENDMDL
+TITLE     frame t= 29.000
+REMARK    THIS IS A SIMULATION BOX
+CRYST1   40.000   40.000   40.000  90.00  90.00  90.00 P 1           1
+MODEL        1
+ATOM      1  N   ALA     1      -1.261   1.457  -0.755  1.00  0.00           N
+ATOM      5  CA  ALA     1      -1.681   0.355   0.152  1.00  0.00           C
+ATOM      7  CB  ALA     1      -2.095  -0.869  -0.691  1.00  0.00           C
+ATOM     11  C   ALA     1      -0.774  -0.003   1.344  1.00  0.00           C
+ATOM     12  O   ALA     1      -1.228   0.157   2.463  1.00  0.00           O
+ATOM     13  N   ALA     2       0.480  -0.499   1.260  1.00  0.00           N
+ATOM     15  CA  ALA     2       1.447  -0.629   0.181  1.00  0.00           C
+ATOM     17  CB  ALA     2       1.539  -2.075  -0.328  1.00  0.00           C
+ATOM     21  C   ALA     2       1.302   0.409  -0.946  1.00  0.00           C
+ATOM     22  OT1 ALA     2       0.806   0.086  -2.045  1.00  0.00           O
+ATOM     23  OT2 ALA     2       1.466   1.610  -0.634  1.00  0.00           O
+TER
+ENDMDL
+TITLE     frame t= 30.000
+REMARK    THIS IS A SIMULATION BOX
+CRYST1   40.000   40.000   40.000  90.00  90.00  90.00 P 1           1
+MODEL        1
+ATOM      1  N   ALA     1      -1.261   1.457  -0.755  1.00  0.00           N
+ATOM      5  CA  ALA     1      -1.681   0.355   0.152  1.00  0.00           C
+ATOM      7  CB  ALA     1      -2.095  -0.869  -0.691  1.00  0.00           C
+ATOM     11  C   ALA     1      -0.774  -0.003   1.344  1.00  0.00           C
+ATOM     12  O   ALA     1      -1.228   0.157   2.463  1.00  0.00           O
+ATOM     13  N   ALA     2       0.480  -0.499   1.260  1.00  0.00           N
+ATOM     15  CA  ALA     2       1.447  -0.629   0.181  1.00  0.00           C
+ATOM     17  CB  ALA     2       1.539  -2.075  -0.328  1.00  0.00           C
+ATOM     21  C   ALA     2       1.302   0.409  -0.946  1.00  0.00           C
+ATOM     22  OT1 ALA     2       0.806   0.086  -2.045  1.00  0.00           O
+ATOM     23  OT2 ALA     2       1.466   1.610  -0.634  1.00  0.00           O
+TER
+ENDMDL
