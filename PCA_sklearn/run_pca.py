@@ -4,14 +4,19 @@
 #> @brief  Very cool pca calculation with sklearn 
 #> @date - Oct, 2023                                                           
 #> - initial version and tests                                                
-#> @date - XXX, 2024                                                           
+#> @date - Jun 2024                                                           
 #> - add class to write pseudotrajectories
 #> @date - Jan 2025
 #> - all calculation options via argparse; add cmd line verifications
-#> - add options to check selection and read eigenvevtors to scale pseudotrajs without recalc everything
+#> - write eigenvectors to file
+#> - added option to check selection 
+#> - added option to read eigenvectors and scale pseudotrajs without full calculation
+#> @date - Mar 2025
+#> - modify code to calculate eigenvectors norm and write them to each pseudotraj bfactor field
+#> @date - Jun 2025
+#> - write covariance matrix to files (ascii and image)
 #> @todo 
 #> - improve checks for integer and positive inputs
-#> - check input files (including eigenvectors when needed)
 #> - improve memory usage and parallelization
 #---------------------------------------------------------------------------------------------------
 
@@ -24,6 +29,10 @@ import mdtraj as md
 from mdtraj.geometry.alignment import compute_average_structure
 from sklearn.decomposition import PCA
 from sklearn.preprocessing import StandardScaler
+import seaborn as sns
+import matplotlib.pyplot as plt
+from matplotlib.colors import LinearSegmentedColormap, TwoSlopeNorm
+from matplotlib.ticker import StrMethodFormatter
 
 #-------------------------------------------------------------------------------------------------#
 #------------- functions used to check input files and options used ------------------------------#
@@ -33,16 +42,17 @@ def check_positive(numeric_type):
         number = numeric_type(value)
         if number <= 0:
             print(f"\tNumber {value} must be positive.")
+            print('|' + '=' * term_size + '|\n')
             exit()
         return number
     return require_positive
-
 
 def check_file(value):
     if os.path.isfile(value):
         print(f"\tFile '{value}' found\n")
     else:
-        print(f"\tFile '{value}' not found\n")
+        print(f"\tFile '{value}' not found. ERROR!\n")
+        print('|' + '=' * term_size + '|\n')
         exit()
 
 #-------------------------------------------------------------------------------------------------#
@@ -75,7 +85,6 @@ def Save_template():
             if line.startswith( "ATOM" ) or line.startswith( "HETATM" ):
                 outFile.write(line)
 
-
 #-------------------------------------------------------------------------------------------------#
 #-------- this class contains functions needed to write pdb coordinates on a pdb template --------#
 class Protein():
@@ -101,7 +110,16 @@ class Protein():
                 self.cur_cor[index] = self.cur_cor[index][:end -length] \
                         + cor + self.cur_cor[index][end:]
             index += 1
-    
+   
+    def set_bfactors(self, bfactors):
+        if len(bfactors) != len(self.cur_cor):
+            raise ValueError("Number of B-factors must match number of atoms")
+
+        for i in range(len(self.cur_cor)):
+            if self.cur_cor[i].startswith(("ATOM  ", "HETATM")):
+                bfactor_str = "%6.2f" % float(bfactors[i])
+                self.cur_cor[i] = self.cur_cor[i][:60] + bfactor_str + self.cur_cor[i][66:]
+
     def write_file(self, file_direction, n_model):
         file = open(file_direction, "w")
         startmodel = "MODEL " + str(n_model) + "\n"
@@ -133,7 +151,7 @@ def Calculate_pca():
 
     #-------------------------------------------------------------------------------------------------#
     #------------------- fit the model with X and apply the dim. reduction on X ----------------------#
-    pca1 = PCA( )
+    pca1 = PCA()
 
     reduced_cartesian = pca1.fit_transform( data )
 
@@ -191,30 +209,45 @@ def Calculate_pca():
 #-------------------------------------------------------------------------------------------------#
 #------------------------------ write eingenvectors to output files ------------------------------#
 def Write_eigenvectors():
-    global eigenvectors
+    global eigenvectors, df_eigenvectors_norm
 
     out_vectors = "eigenvectors.dat"
+    out_norms   = "eigenvectors_norm.dat"
+    df_eigenvectors_norm = [0] * total_pc_output
+    all_norms = []
 
     try:
         os.remove( out_vectors )
+        os.remove( out_norms )
     except OSError:
         pass
 
     for pca in range(0,total_pc_output):
-        str_header = [ "--Eingenvector_" + str(pca), "  X,Y,Z ", "coordinates--"]
         df_eigenvectors = pd.DataFrame( eigenvectors[pca].reshape( template.n_atoms, 3 ))
-        df_eigenvectors.to_csv(out_vectors, header=str_header, index=None, sep='\t', float_format='%12.8f', mode = 'a')
-    
+        df_eigenvectors_norm[pca] = pd.DataFrame( np.linalg.norm(eigenvectors[pca].reshape( template.n_atoms, 3 ), axis=1).reshape( template.n_atoms,1) )[0]
+        df_eigenvectors_merged = pd.concat([df_eigenvectors, df_eigenvectors_norm[pca]], axis=1)
+
+        #print(df_eigenvectors_merged)
+        label_vx = f" v_{pca}_x".center(12)
+        label_vy = f" v_{pca}_y".center(12)
+        label_vz = f" v_{pca}_z".center(12)
+        label_vnorm = f" || v_{pca} ||".center(12)
+        str_header = [ label_vx, label_vy, label_vz, label_vnorm]
+        
+        df_eigenvectors_merged.to_csv(out_vectors, header=str_header, index=None, sep='\t', float_format='%12.9f', mode = 'a')
+
 def Read_eigenvectors( total_pc_output ):
-    global eigenvectors, avg_angstrom
+    global eigenvectors, avg_angstrom, df_eigenvectors_norm
 
     check_file( "average_structure.pdb" )
 
     template     = md.load( "average_structure.pdb", top = "average_structure.pdb" )
     avg_angstrom = template.xyz * 10.0
-    
-    eigenvectors = [0] * total_pc_output 
-    in_vectors   = "eigenvectors.dat"
+   
+    tmp                  = []
+    eigenvectors         = [0] * total_pc_output 
+    df_eigenvectors_norm = [0] * total_pc_output 
+    in_vectors           = "eigenvectors.dat"
 
     check_file( in_vectors )
     
@@ -225,8 +258,17 @@ def Read_eigenvectors( total_pc_output ):
         for n in range(0,template.n_atoms):
             first = 1 + (template.n_atoms + 1) * pca
             last  = (template.n_atoms + 1) * (pca + 1)
+        tmp = np.array(' '.join(testsite_array[first:last]).split(), dtype=float)
 
-        eigenvectors[pca] = np.array(' '.join(testsite_array[first:last]).split(), dtype=float)
+        mask1 = np.ones(len(tmp), dtype=bool)
+        mask1[3::4] = False  # Set every 4th element to False
+        filtered_arr = tmp[mask1].reshape(-1,3)
+        eigenvectors[pca] = filtered_arr
+        
+        mask2 = np.zeros(len(tmp), dtype=bool)
+        mask2[3::4] = True  # Set every 4th element to True
+        filtered_arr = tmp[mask2].reshape(-1,1)
+        df_eigenvectors_norm[pca] = filtered_arr
 
 #-------------------------------------------------------------------------------------------------#
 #------------------------ write eingenvectors on pseudotrajectory files --------------------------#
@@ -249,13 +291,76 @@ def Write_pseudotrajs():
         except OSError:
             pass
 
-        for steps in range(-pseudotraj_steps,pseudotraj_steps):
-            coords = avg_angstrom.reshape( -1, 1 ) - eigenvectors[pca].reshape( -1, 1 ) * steps * pseudotraj_scalf
+        for steps in range( -pseudotraj_steps, pseudotraj_steps+1 ):
+            coords = avg_angstrom.reshape( -1, 1 ) + eigenvectors[pca].reshape( -1, 1 ) * steps * pseudotraj_scalf
             protein.load_coor( coords )
             model_nr = steps + pseudotraj_steps + 1
+            bfactors = df_eigenvectors_norm[pca]
+            protein.set_bfactors( bfactors )
             protein.append_file( filename, model_nr )
 
         print( 'DONE' )
+
+#-------------------------------------------------------------------------------------------------#
+#------------------------ write covariance matrix to ASCII and PNG files -------------------------#
+def Get_covar_matrix():
+
+    print( '\n\tWriting covariance matrix files... ', end = '' )
+    
+    cov_matrix = pca1.get_covariance()
+    np.savetxt("covar_matrix.dat", cov_matrix, fmt="%.6f", delimiter=',')
+    
+    max_x   = len(cov_matrix[0])
+    max_y   = len(cov_matrix[1])
+    min_cov = np.min(cov_matrix)
+    max_cov = np.max(cov_matrix)
+
+    colors = [ ( min_cov, "#3333CC" ), ( 0.0, "#EEEEEE" ), ( max_cov, "#CC3333" ) ]
+    cmap   = LinearSegmentedColormap.from_list( "custom", [ c for v,c in colors ] )
+    norm   = TwoSlopeNorm( vmin = min_cov, vcenter = 0.0, vmax = max_cov )
+    cbar   = { "ticks": [ min_cov, 0.0, max_cov ], "format": StrMethodFormatter("{x:.1E}") } 
+    
+    ax = sns.heatmap( cov_matrix, clip_on = False, norm = norm, cmap = cmap, cbar_kws = cbar ) 
+   
+    for _, spine in ax.spines.items():
+        spine.set_visible(True)  
+        spine.set_linewidth(1)   
+        spine.set_color('black') 
+
+    min_yticks = np.arange( 0.5, max_y + 0.5, 1 )
+    maj_yticks = np.arange( 0, max_y + 1, 5 )    
+    ytick_pos  = maj_yticks + 0.5
+
+    ax.invert_yaxis()
+    ax.set_yticks( ytick_pos )
+    ax.set_yticks( min_yticks, minor = True )
+    ax.set_yticklabels( maj_yticks, rotation = 0 ) 
+
+    min_xticks = np.arange( 0.5, max_x + 0.5, 1 )  
+    maj_xticks = np.arange( 0, max_x + 1, 5 ) 
+    xtick_pos  = maj_xticks + 0.5
+    
+    ax.set_xticks( xtick_pos )
+    ax.set_xticks( min_yticks, minor = True )
+    ax.set_xticklabels( maj_xticks, rotation = 0 ) 
+
+    ax.set_ylabel("Atom index")
+    ax.set_xlabel("Atom index")
+    plt.title("Covariance matrix")
+
+    plt.savefig("covar_matrix.png", format="png", bbox_inches="tight", dpi=300)
+    plt.close()
+
+    print( 'DONE' )
+    
+    print( '\n\tWriting RMSF file... ', end = '' )
+    
+    diag = np.diag(cov_matrix.astype(np.float32))
+
+    rmsf = np.sqrt(diag.reshape(-1,3).sum(axis=1))
+    np.savetxt("rmsf.dat", rmsf, fmt="%.6f", delimiter=',')
+    
+    print( 'DONE' )
 
 ######################################### Command line arguments parsing ##############################################
 
@@ -274,23 +379,23 @@ def Read_cmdline():
     dsp_help = "Scaling factor for pseudotrajectories displacements"
     num_help = "Number of principal components to analyze"
 
-    parser_a = subparsers.add_parser('check', help='Requires: -p/--pdb, -t/--trj, -f/--fit, -s/--sel')
-    parser_a.add_argument('-p', '--pdb', required=True, help = pdb_help)
-    parser_a.add_argument('-t', '--trj', required=True, help = trj_help)
-    parser_a.add_argument('-f', '--fit', required=True, help = fit_help)
-    parser_a.add_argument('-s', '--sel', required=True, help = sel_help)
+    parser_a = subparsers.add_parser( 'check', help = 'Requires: -p/--pdb, -t/--trj, -f/--fit, -s/--sel' )
+    parser_a.add_argument( '-p', '--pdb', required = True, help = pdb_help ) 
+    parser_a.add_argument( '-t', '--trj', required = True, help = trj_help )
+    parser_a.add_argument( '-f', '--fit', required = True, help = fit_help )
+    parser_a.add_argument( '-s', '--sel', required = True, help = sel_help )
 
-    parser_b = subparsers.add_parser('run', help='Requires: -p/--pdb, -t/--trj, -f/--fit, -s/--sel, -d/--dsp, -n/--num')
-    parser_b.add_argument('-p', '--pdb', required=True, help = pdb_help)
-    parser_b.add_argument('-t', '--trj', required=True, help = trj_help)
-    parser_b.add_argument('-f', '--fit', required=True, help = fit_help)
-    parser_b.add_argument('-s', '--sel', required=True, help = sel_help)
-    parser_b.add_argument('-d', '--dsp', required=True, help = dsp_help, type=check_positive(float))
-    parser_b.add_argument('-n', '--num', required=True, help = num_help, type=check_positive(int))
+    parser_b = subparsers.add_parser( 'run', help = 'Requires: -p/--pdb, -t/--trj, -f/--fit, -s/--sel, -d/--dsp, -n/--num' )
+    parser_b.add_argument( '-p', '--pdb', required = True, help = pdb_help )
+    parser_b.add_argument( '-t', '--trj', required = True, help = trj_help )
+    parser_b.add_argument( '-f', '--fit', required = True, help = fit_help )
+    parser_b.add_argument( '-s', '--sel', required = True, help = sel_help )
+    parser_b.add_argument( '-d', '--dsp', required = True, help = dsp_help, type = check_positive(float) )
+    parser_b.add_argument( '-n', '--num', required = True, help = num_help, type = check_positive(int) )
 
-    parser_c = subparsers.add_parser('rescale', help='Requires: -d/--dsp, -n/--num')
-    parser_c.add_argument('-d', '--dsp', required=True, help = dsp_help)
-    parser_c.add_argument('-n', '--num', required=True, help = num_help)
+    parser_c = subparsers.add_parser( 'rescale', help = 'Requires: -d/--dsp, -n/--num' )
+    parser_c.add_argument( '-d', '--dsp', required = True, help = dsp_help )
+    parser_c.add_argument( '-n', '--num', required = True, help = num_help )
 
     args = parser.parse_args()
 
@@ -324,6 +429,7 @@ if __name__ == '__main__':
         Calculate_pca()
         Write_eigenvectors()
         Write_pseudotrajs()
+        Get_covar_matrix()
     elif args.command == "rescale":
         print("\tStarting pseudotrajectories generation...\n")
         total_pc_output   = int(args.num)
