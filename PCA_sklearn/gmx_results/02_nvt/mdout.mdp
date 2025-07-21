@@ -2,7 +2,7 @@
 ;	File 'mdout.mdp' was generated
 ;	By user: unknown (1000)
 ;	On host: felippe-yoga
-;	At date: Wed Jul  9 13:44:02 2025
+;	At date: Mon Jul 21 08:13:05 2025
 ;
 ;	Created by:
 ;	                     :-) GROMACS - gmx grompp, 2024.4 (-:
@@ -11,7 +11,7 @@
 ;	Data prefix:  /home/felippe/programas/gromacs-2024.4/gmx_2024.4
 ;	Working dir:  /home/felippe/repos/MD_tools/PCA_sklearn/gmx_results/02_nvt
 ;	Command line:
-;	  gmx_mpi grompp -c ../01_steep/steep.gro -f ../files/grompp_nvt.mdp -p ../files/topol.top -o nvt.tpr
+;	  gmx_mpi grompp -c nvt_eq.gro -f ../files/grompp_nvt_run.mdp -p ../files/topol.top -n ../files/index.ndx -t nvt_eq.cpt -o nvt_run.tpr
 
 ; VARIOUS PREPROCESSING OPTIONS
 ; Preprocessor information: use cpp syntax.
@@ -25,7 +25,7 @@ integrator               = sd
 ; Start time and timestep in ps
 tinit                    = 0
 dt                       = 0.002
-nsteps                   = 2500000
+nsteps                   = 5000000
 ; For exact run continuation or redoing part of a run
 init-step                = 0
 ; Part index is updated automatically on checkpointing (keeps files separate)
@@ -173,16 +173,16 @@ annealing-time           =
 annealing-temp           = 
 
 ; GENERATE VELOCITIES FOR STARTUP RUN
-gen_vel                  = yes
+gen_vel                  = no
 gen_temp                 = 300
-gen-seed                 = -134255025
+gen-seed                 = -237521251
 
 ; OPTIONS FOR BONDS    
 constraints              = h-bonds
 ; Type of constraint algorithm
 constraint-algorithm     = Lincs
 ; Do not constrain the start configuration
-continuation             = no
+continuation             = yes
 ; Use successive overrelaxation to reduce the number of shake iterations
 Shake-SOR                = no
 ; Relative tolerance of shake

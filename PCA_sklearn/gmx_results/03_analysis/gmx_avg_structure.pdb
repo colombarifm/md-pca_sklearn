@@ -2,16 +2,16 @@ TITLE     Protein
 REMARK    THIS IS A SIMULATION BOX
 CRYST1   40.000   40.000   40.000  90.00  90.00  90.00 P 1           1
 MODEL        1
-ATOM      1  N   ALA     1      19.212  21.838  19.396  1.00  0.65           N
-ATOM      5  CA  ALA     1      18.770  20.730  20.284  1.00  0.20           C
-ATOM      7  CB  ALA     1      18.336  19.527  19.421  1.00  1.01           C
-ATOM     11  C   ALA     1      19.667  20.337  21.472  1.00  0.13           C
-ATOM     12  O   ALA     1      19.213  20.488  22.593  1.00  0.67           O
-ATOM     13  N   ALA     2      20.913  19.820  21.384  1.00  0.48           N
-ATOM     15  CA  ALA     2      21.880  19.689  20.305  1.00  0.19           C
-ATOM     17  CB  ALA     2      21.946  18.250  19.774  1.00  1.05           C
-ATOM     21  C   ALA     2      21.756  20.747  19.194  1.00  0.15           C
-ATOM     22  OT1 ALA     2      21.258  20.450  18.089  1.00  0.78           O
-ATOM     23  OT2 ALA     2      21.942  21.940  19.525  1.00  0.86           O
+ATOM      1  N   ALA     1        -nan    -nan  19.229  1.00  0.54           N
+ATOM      5  CA  ALA     1        -nan    -nan  20.568  1.00  0.21           C
+ATOM      7  CB  ALA     1        -nan    -nan  20.662  1.00  0.80           C
+ATOM     11  C   ALA     1        -nan    -nan  21.095  1.00  0.10           C
+ATOM     12  O   ALA     1        -nan    -nan  22.103  1.00  0.73           O
+ATOM     13  N   ALA     2        -nan    -nan  20.539  1.00  0.30           N
+ATOM     15  CA  ALA     2        -nan    -nan  19.274  1.00  0.17           C
+ATOM     17  CB  ALA     2        -nan    -nan  19.450  1.00  0.77           C
+ATOM     21  C   ALA     2        -nan    -nan  18.102  1.00  0.14           C
+ATOM     22  OT1 ALA     2        -nan    -nan  17.720  1.00  0.62           O
+ATOM     23  OT2 ALA     2        -nan    -nan  17.738  1.00  0.78           O
 TER
 ENDMDL

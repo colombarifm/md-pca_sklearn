@@ -1,10 +1,10 @@
-Covariance analysis log, written Wed Jul  9 14:04:07 2025
+Covariance analysis log, written Mon Jul 21 08:48:49 2025
 
 Program: covar
 Working directory: /home/felippe/repos/MD_tools/PCA_sklearn/gmx_results/03_analysis
 
-Read 251 frames from trj_fit.xtc (time 0 to 5000 ps)
-Read reference structure for fit from ../02_nvt/nvt.tpr
+Read 501 frames from trj_fit.xtc (time 0 to 10000 ps)
+Read reference structure for fit from ../02_nvt/nvt_run.tpr
 Read index groups from ../files/index.ndx
 
 Analysis group is 'Protein-H' (11 atoms)
@@ -12,8 +12,8 @@ Fit group is 'Protein-H' (11 atoms)
 Analysis is non-mass weighted
 Fit is non-mass weighted
 Diagonalized the 33x33 covariance matrix
-Trace of the covariance matrix before diagonalizing: 0.00233228
-Trace of the covariance matrix after diagonalizing: 0.00233228
+Trace of the covariance matrix before diagonalizing: 0.00195059
+Trace of the covariance matrix after diagonalizing: 0.00195059
 
 Wrote 33 eigenvalues to gmx_eigenvalues.xvg
 Wrote reference structure to gmx_eigenvectors.trr

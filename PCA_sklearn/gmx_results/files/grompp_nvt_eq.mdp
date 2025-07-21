@@ -3,7 +3,7 @@
 integrator  = sd
 dt          = 0.002
 tinit       = 0
-nsteps      = 2500000     ; 5 ns 
+nsteps      = 500000     ; 1 ns 
 nstcomm     = 10
 comm-grps   = system
 comm-mode   = linear
