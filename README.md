@@ -140,7 +140,7 @@ For each method, the eigenvalues (or the variance of each eigenvector) was also 
 
 ## Projections of first three PCs
 
-The projection of the first principal components is in perfect agreement in both methods. On the other hand, results are exactly the same for eigenvectors #2 and #3, but with opposite sign. It is interesting to notice that PCA calculation rotates the data to arbitrary directions to maximize the variance. Thus, the sign is arbitrary and meaningless. Projections with opposite sign are equivalent, and results in the same interpretations.
+The projection of the first principal components is in perfect agreement in both methods. Results are exactly the same for eigenvectors #2 and #3, but with opposite sign. It is interesting to notice that PCA calculation rotates the data to arbitrary directions to maximize the variance. Thus, the sign is arbitrary and meaningless. Projections with opposite sign are equivalent, and result in the same interpretations.
 
 <center>
 <table>
