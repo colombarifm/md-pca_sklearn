@@ -1,0 +1,58 @@
+; Run parameters
+
+integrator  = sd
+dt          = 0.002
+tinit       = 0
+nsteps      = 5000000     ; 10 ns 
+nstcomm     = 10
+comm-grps   = system
+comm-mode   = linear
+
+; Output parameters
+nstxout     = 0     
+nstvout     = 0 
+nstfout     = 0
+nstxtcout   = 10000
+nstenergy   = 10000
+nstlog      = 0
+
+constraints              = h-bonds
+constraint-algorithm     = Lincs
+lincs-order              = 4
+lincs-iter               = 1
+continuation             = yes
+
+; cutoff scheme
+rlist       = 1.2
+cutoff-scheme = verlet
+
+; VdW parameters
+vdwtype          = cutoff 
+rvdw             = 1.2
+rvdw-switch      = 1.0
+vdw-modifier     = Force-switch
+DispCorr         = no
+
+; PME electrostatics parameters
+coulombtype     = pme
+rcoulomb        = 1.2
+ewald-rtol      = 1e-5
+optimize_fft    = yes
+fourierspacing  = 0.12
+pme-order       = 4
+
+;temperature coupling is on in two groups
+Tcoupl      = v-rescale
+tc_grps     = system
+tau_t       = 2.0 
+ref_t       = 300 
+
+; Pressure coupling is on
+Pcoupl          = no 
+
+; Generate velocities is on 
+gen_vel     = no 
+gen_temp    = 300
+
+; Periodic boundary conditions are on in all directions
+pbc     = xyz

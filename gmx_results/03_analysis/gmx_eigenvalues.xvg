@@ -1,0 +1,50 @@
+# This file was created Mon Jul 21 08:48:49 2025
+# Created by:
+#                      :-) GROMACS - gmx covar, 2024.4 (-:
+# 
+# Executable:   /home/felippe/programas/gromacs-2024.4/gmx_2024.4/bin/gmx_mpi
+# Data prefix:  /home/felippe/programas/gromacs-2024.4/gmx_2024.4
+# Working dir:  /home/felippe/repos/MD_tools/PCA_sklearn/gmx_results/03_analysis
+# Command line:
+#   gmx_mpi covar -s ../02_nvt/nvt_run.tpr -f trj_fit.xtc -n ../files/index.ndx -o gmx_eigenvalues.xvg -v gmx_eigenvectors.trr -ascii gmx_covariancemtx.dat -xpm gmx_covariancemtx.xpm
+# gmx covar is part of G R O M A C S:
+#
+# Good ROcking Metal Altar for Chronical Sinners
+#
+@    title "Eigenvalues of the covariance matrix"
+@    xaxis  label "Eigenvector index"
+@    yaxis  label "(nm\S2\N)"
+@TYPE xy
+         1 0.000661242
+         2 0.000337793
+         3 0.000251944
+         4 0.000214711
+         5 0.0001055
+         6 6.81865e-05
+         7 5.21564e-05
+         8 3.9962e-05
+         9 3.44742e-05
+        10 3.02968e-05
+        11 2.63742e-05
+        12 2.07892e-05
+        13 1.99041e-05
+        14 1.52952e-05
+        15 1.09274e-05
+        16 8.89777e-06
+        17 8.51154e-06
+        18 7.82592e-06
+        19 6.57808e-06
+        20 5.70706e-06
+        21 4.49842e-06
+        22 4.39594e-06
+        23 3.90806e-06
+        24 3.2356e-06
+        25 3.07288e-06
+        26 2.51641e-06
+        27 1.88594e-06
+        28 5.93487e-11
+        29 1.46105e-12
+        30 -1.12582e-11
+        31 -1.3143e-11
+        32 -1.45069e-11
+        33 -2.92215e-11

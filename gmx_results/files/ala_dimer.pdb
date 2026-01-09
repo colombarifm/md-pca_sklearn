@@ -1,0 +1,12 @@
+HEADER
+ATOM      1  N   ALA A   1       0.000   0.000   0.000
+ATOM      2  CA  ALA A   1       0.000   0.000   1.460
+ATOM      3  C   ALA A   1       1.404   0.000   2.016
+ATOM      4  O   ALA A   1       1.755   0.753   2.910
+ATOM      5  CB  ALA A   1      -0.779  -1.211   1.994
+ATOM      6  N   ALA A   2       2.195  -0.904   1.422
+ATOM      7  CA  ALA A   2       3.591  -1.058   1.821
+ATOM      8  C   ALA A   2       4.358   0.233   1.669
+ATOM      9  O   ALA A   2       5.092   0.667   2.542
+ATOM     10  CB  ALA A   2       4.262  -2.170   0.999
+ATOM     11  OXT ALA A   2       4.271   0.901   0.651

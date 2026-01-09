@@ -1,0 +1,25 @@
+; energy minimization
+
+integrator      = steep
+nsteps          = 50000
+emtol           = 50
+emstep          = 1.0
+rlist           = 1.2
+
+coulombtype     = pme
+rcoulomb        = 1.2
+ewald-rtol      = 1e-5
+
+vdwtype          = cutoff
+rvdw             = 1.2
+vdw-modifier     = Potential-Shift
+
+fourierspacing   = 0.12
+pme-order        = 4
+
+pbc             = xyz
+cutoff-scheme	  = verlet
+nstlist         = 10
+nstxout         = 100
+
+DispCorr = no
