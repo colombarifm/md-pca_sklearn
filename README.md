@@ -154,7 +154,7 @@ The projection of the first principal components is in perfect agreement in both
 </table>
 </center>
 
-## First eigenvector
+## Pseudotrajectory for the first eigenvector
 
 <center>
 <table>
@@ -162,12 +162,12 @@ The projection of the first principal components is in perfect agreement in both
     <td align="center">
       <img src="example/all_plots/gmx_pc1.gif" alt="gromacs" height="300"/>
       <br>
-      <em>Scaled pseudotrajectory for PC1 obtained with Gromacs tools.</em>
+      <em>Scaled pseudotrajectory obtained with Gromacs tools.</em>
     </td>
     <td align="center">
       <img src="example/all_plots/skl_pc1.gif" alt="scikit-learn" height="300"/>
       <br>
-      <em>Scaled pseudotrajectory for PC1 obtained with this code.</em>
+      <em>Scaled pseudotrajectory obtained with this code.</em>
     </td>
   </tr>
 </table>
