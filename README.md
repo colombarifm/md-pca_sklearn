@@ -89,103 +89,103 @@ Resulting data were validated using Gromacs 2024.4 *rmsf*, *covar* and *anaeig* 
 
 ## Covariance matrix
 
-<center>
-<table>
-  <tr>
-    <td align="center">
-      <img src="example/gmx_results/03_analysis/gmx_covariancemtx.png" alt="gromacs" height="330"/>
-      <br>
-      <em>Covariance matrix obtained with Gromacs tools.</em>
-    </td>
-    <td align="center">
-      <img src="example/sklearn_results/covar_matrix.png" alt="scikit-learn" height="330"/>
-      <br>
-      <em>Covariance matrix obtained with this code.</em>
-    </td>
-  </tr>
-</table>
-</center>
+<div align="center">
+  <table>
+    <tr>
+      <td align="center">
+        <img src="example/gmx_results/03_analysis/gmx_covariancemtx.png" alt="gromacs" height="330"/>
+        <br>
+        <em>Covariance matrix obtained with Gromacs tools.</em>
+      </td>
+      <td align="center">
+        <img src="example/sklearn_results/covar_matrix.png" alt="scikit-learn" height="330"/>
+        <br>
+        <em>Covariance matrix obtained with this code.</em>
+      </td>
+    </tr>
+  </table>
+</div>
 
 ## RMSF
 
 Root mean-squared fluctuations were calculated for the MD trajectory using Gromacs *rmsf* tool and also from the diagonal elements of the covariance matrix obtained by Scikit-learn calculation.
 
-<center>
-<table>
-  <tr>
-    <td align="center">
-      <img src="example/all_plots/compare_rmsf.png" alt="rmsf values" height="300"/>
-      <br>
-      <em>RMSF values for the MD trajectory obtained with both methods.</em>
-    </td>
-  </tr>
-</table>
-</center>
+<div align="center">
+  <table>
+    <tr>
+      <td align="center">
+        <img src="example/all_plots/compare_rmsf.png" alt="rmsf values" height="300"/>
+        <br>
+        <em>RMSF values for the MD trajectory obtained with both methods.</em>
+      </td>
+    </tr>
+  </table>
+</div>
 
 ## Eigenvalues
 
 For each method, the eigenvalues (or the variance of each eigenvector) was also computed and the results are in perfect agreement.
 
-<center>
-<table>
-  <tr>
-    <td align="center">
-      <img src="example/all_plots/compare_variance.png" alt="eigenvalues" height="300"/>
-      <br>
-      <em>Resulting PCA eigenvalues obtained with both methods.</em>
-    </td>
-  </tr>
-</table>
-</center>
+<div align="center">
+  <table>
+    <tr>
+      <td align="center">
+        <img src="example/all_plots/compare_variance.png" alt="eigenvalues" height="300"/>
+        <br>
+        <em>Resulting PCA eigenvalues obtained with both methods.</em>
+      </td>
+    </tr>
+  </table>
+</div>
 
 ## Projections of first three PCs
 
 The projection of the first principal components is in perfect agreement in both methods. Results are exactly the same for eigenvectors #2 and #3, but with opposite sign. It is interesting to notice that PCA calculation rotates the data to arbitrary directions to maximize the variance. Thus, the sign is arbitrary and meaningless. Projections with opposite sign are equivalent, and result in the same interpretations.
 
-<center>
-<table>
-  <tr>
-    <td align="center">
-      <img src="example/all_plots/compare_projections.png" alt="projections" height="600"/>
-      <br>
-      <em>Projections of first three principal components obtained with both methods.</em>
-    </td>
-  </tr>
-</table>
-</center>
+<div align="center">
+  <table>
+    <tr>
+      <td align="center">
+        <img src="example/all_plots/compare_projections.png" alt="projections" height="600"/>
+        <br>
+        <em>Projections of first three principal components obtained with both methods.</em>
+      </td>
+    </tr>
+  </table>
+</div>
 
 ## Pseudotrajectory for the first eigenvector
 
 <div align="center">
-<table>
-  <tr>
-    <td align="center">
-      <img src="example/all_plots/gmx_pc1.gif" alt="gromacs" height="300"/>
-      <br>
-      <em>Scaled pseudotrajectory obtained with Gromacs tools.</em>
-    </td>
-    <td align="center">
-      <img src="example/all_plots/skl_pc1.gif" alt="scikit-learn" height="300"/>
-      <br>
-      <em>Scaled pseudotrajectory obtained with this code.</em>
-    </td>
-  </tr>
-</table>
+  <table>
+    <tr>
+      <td align="center">
+        <img src="example/all_plots/gmx_pc1.gif" alt="gromacs" height="300"/>
+        <br>
+        <em>Scaled pseudotrajectory obtained with Gromacs tools.</em>
+      </td>
+      <td align="center">
+        <img src="example/all_plots/skl_pc1.gif" alt="scikit-learn" height="300"/>
+        <br>
+        <em>Scaled pseudotrajectory obtained with this code.</em>
+      </td>
+    </tr>
+  </table>
 </div>
 
-For each atom, the eigenvector norm was calculated and written to each pseudotrajectory. By selecting the central frame (which corresponded to the average structure), one can set the colors according to the B-factor field and get a static visualization of which atoms are more involved in each eigenvalue. In the example below, white color correspond to | v | = 0 and black color correspond to | v | = 0.6.
+For each atom, the eigenvector norm was calculated and written to each pseudotrajectory. By selecting the central frame (which corresponded to the average structure), one can set the colors according to the B-factor field and get a static visualization of which atoms are more involved in each eigenvalue. In the example below, white color correspond to || v || = 0 and black color correspond to || v || = 0.6.
 
-<center>
-<table>
-  <tr>
-    <td align="center">
-      <img src="example/all_plots/skl_avg_eigenvectors.png" alt="scikit-learn" height="300"/>
-      <br>
-      <em>Average structure from MD trajectory with atoms colored by eigenvector norm values (this code).</em>
-    </td>
-  </tr>
-</table>
-</center>
+<div align="center">
+  <table>
+    <tr>
+      <td align="center">
+        <img src="example/all_plots/skl_avg_eigenvectors.png" alt="scikit-learn" height="300"/>
+        <br>
+        <em>Average structure from MD trajectory with atoms colored by eigenvector norm values (this code).</em>
+      </td>
+    </tr>
+  </table>
+</div>
 
 # Directory organization
 
