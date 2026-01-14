@@ -93,12 +93,12 @@ Resulting data were validated using Gromacs 2024.4 *rmsf*, *covar* and *anaeig* 
 <table>
   <tr>
     <td align="center">
-      <img src="example/gmx_results/03_analysis/gmx_covariancemtx.png" alt="gromacs" height="350"/>
+      <img src="example/gmx_results/03_analysis/gmx_covariancemtx.png" alt="gromacs" height="360"/>
       <br>
       <em>Covariance matrix obtained with Gromacs tools.</em>
     </td>
     <td align="center">
-      <img src="example/sklearn_results/covar_matrix.png" alt="scikit-learn" height="350"/>
+      <img src="example/sklearn_results/covar_matrix.png" alt="scikit-learn" height="320"/>
       <br>
       <em>Covariance matrix obtained with this code.</em>
     </td>
