@@ -222,10 +222,10 @@ def Calculate_pca():
 def Write_eigenvectors():
     global eigenvectors, df_eigenvectors_norm
 
-    out_vectors = "eigenvectors.dat"
-    out_norms   = "eigenvectors_norm.dat"
+    out_vectors          = "eigenvectors.dat"
+    out_norms            = "eigenvectors_norm.dat"
     df_eigenvectors_norm = [0] * total_pc_output
-    all_norms = []
+    all_norms            = []
 
     try:
         os.remove( out_vectors )
@@ -233,17 +233,17 @@ def Write_eigenvectors():
     except OSError:
         pass
 
-    for pca in range(0,total_pc_output):
-        df_eigenvectors = pd.DataFrame( eigenvectors[pca].reshape( template.n_atoms, 3 ))
-        df_eigenvectors_norm[pca] = pd.DataFrame( np.linalg.norm(eigenvectors[pca].reshape( template.n_atoms, 3 ), axis=1).reshape( template.n_atoms,1) )[0]
-        df_eigenvectors_merged = pd.concat([df_eigenvectors, df_eigenvectors_norm[pca]], axis=1)
+    for pc in range(0,total_pc_output):
+        df_eigenvectors          = pd.DataFrame( eigenvectors[pc].reshape( template.n_atoms, 3 ))
+        df_eigenvectors_norm[pc] = pd.DataFrame( np.linalg.norm(eigenvectors[pc].reshape( template.n_atoms, 3 ), axis=1).reshape( template.n_atoms,1) )[0]
+        df_eigenvectors_merged   = pd.concat([df_eigenvectors, df_eigenvectors_norm[pc]], axis=1)
 
         #print(df_eigenvectors_merged)
-        label_vx = f" v_{pca}_x".center(12)
-        label_vy = f" v_{pca}_y".center(12)
-        label_vz = f" v_{pca}_z".center(12)
-        label_vnorm = f" || v_{pca} ||".center(12)
-        str_header = [ label_vx, label_vy, label_vz, label_vnorm]
+        label_vx    = f" v_{pc}_x".center(12)
+        label_vy    = f" v_{pc}_y".center(12)
+        label_vz    = f" v_{pc}_z".center(12)
+        label_vnorm = f" || v_{pc} ||".center(12)
+        str_header  = [ label_vx, label_vy, label_vz, label_vnorm]
         
         df_eigenvectors_merged.to_csv(out_vectors, header=str_header, index=None, sep='\t', float_format='%12.9f', mode = 'a')
 
@@ -260,26 +260,26 @@ def Read_eigenvectors( total_pc_output ):
     df_eigenvectors_norm = [0] * total_pc_output 
     in_vectors           = "eigenvectors.dat"
 
-    check_file( in_vectors )
+    Check_file( in_vectors )
     
     with open(in_vectors) as vectors_file:
         testsite_array = vectors_file.readlines()
 
-    for pca in range(0,total_pc_output):
+    for pc in range(0,total_pc_output):
         for n in range(0,template.n_atoms):
-            first = 1 + (template.n_atoms + 1) * pca
-            last  = (template.n_atoms + 1) * (pca + 1)
+            first = 1 + (template.n_atoms + 1) * pc
+            last  = (template.n_atoms + 1) * (pc + 1)
         tmp = np.array(' '.join(testsite_array[first:last]).split(), dtype=float)
 
-        mask1 = np.ones(len(tmp), dtype=bool)
-        mask1[3::4] = False  # just set every 4th element to False
-        filtered_arr = tmp[mask1].reshape(-1,3)
-        eigenvectors[pca] = filtered_arr
+        mask1            = np.ones(len(tmp), dtype=bool)
+        mask1[3::4]      = False  # just set every 4th element to False
+        filtered_arr     = tmp[mask1].reshape(-1,3)
+        eigenvectors[pc] = filtered_arr
         
-        mask2 = np.zeros(len(tmp), dtype=bool)
-        mask2[3::4] = True  # or set every 4th element to True
-        filtered_arr = tmp[mask2].reshape(-1,1)
-        df_eigenvectors_norm[pca] = filtered_arr
+        mask2                    = np.zeros(len(tmp), dtype=bool)
+        mask2[3::4]              = True  # or set every 4th element to True
+        filtered_arr             = tmp[mask2].reshape(-1,1)
+        df_eigenvectors_norm[pc] = filtered_arr
 
 #-------------------------------------------------------------------------------------------------#
 #------------------------ write eingenvectors on pseudotrajectory files --------------------------#
