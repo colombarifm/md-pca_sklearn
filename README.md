@@ -189,7 +189,7 @@ For each atom, the eigenvector norm was calculated and written to each pseudotra
 
 # Directory organization
 
-* [`example`](.example): Directory containing calculations for alanine dimer
+* [`example`](./example): Directory containing calculations for alanine dimer
   * [`gmx_results`](./example/gmx_results): MD trajectories and results obtained with gromacs tools (*rmsf*, *colvar* and *anaeig*)
   * [`sklearn_results`](./example/sklearn_results): Results obtained with this code
   * [`all_plots`](./example/all_plots): Python notebook with the plots shown here
