@@ -37,17 +37,17 @@ from matplotlib.ticker import StrMethodFormatter
 #-------------------------------------------------------------------------------------------------#
 #------------- functions used to check input files and options used ------------------------------#
 
-def check_positive(numeric_type):
-    def require_positive(value):
+def Check_positive(numeric_type):
+    def Require_positive(value):
         number = numeric_type(value)
         if number <= 0:
             print(f"\tNumber {value} must be positive.")
             print('|' + '=' * term_size + '|\n')
             exit()
         return number
-    return require_positive
+    return Require_positive
 
-def check_file(value):
+def Check_file(value):
     if os.path.isfile(value):
         print(f"\tFile '{value}' found\n")
     else:
@@ -60,8 +60,9 @@ def check_file(value):
 def Load_files():
     global traj, aligned_traj
 
-    check_file( pdb_file )
-    check_file( trj_file )
+    Check_file( pdb_file )
+    
+    Check_file( trj_file )
 
     traj = md.load( trj_file, top = pdb_file )
 
@@ -92,26 +93,28 @@ class Protein():
         self.template = []
         self.cur_cor = None
 
-    def extract_template(self, pdb_file):
+    def Extract_template(self, pdb_file):
         file = open(pdb_file).readlines()
         for line in file:
             self.template.append(line[:31] + " " * 23 + line[54:])
 
-    def load_coor(self, coordinates):
+    def Load_coor(self, coordinates):
         self.cur_cor = self.template[:]
         index = 0
         for i in range(len(coordinates) // 3):
             x, y, z = coordinates[3 * i: 3 * (i + 1)]
             #print(x,y,z)
+
             x, y, z = "%.3f" % x[0], "%.3f" % y[0], "%.3f" % z[0]
             #print("new",x,y,z)
+
             for cor, end in zip ([x, y, z], [38, 46, 54]):
                 length = len(cor)
                 self.cur_cor[index] = self.cur_cor[index][:end -length] \
                         + cor + self.cur_cor[index][end:]
             index += 1
    
-    def set_bfactors(self, bfactors):
+    def Set_bfactors(self, bfactors):
         if len(bfactors) != len(self.cur_cor):
             raise ValueError("Number of B-factors must match number of atoms")
 
@@ -120,17 +123,19 @@ class Protein():
                 bfactor_str = "%6.2f" % float(bfactors[i])
                 self.cur_cor[i] = self.cur_cor[i][:60] + bfactor_str + self.cur_cor[i][66:]
 
-    def write_file(self, file_direction, n_model):
+    def Write_file(self, file_direction, n_model):
         file = open(file_direction, "w")
         startmodel = "MODEL " + str(n_model) + "\n"
         endmodel   = "ENDMDL\n"
         file.write(startmodel)
+
         for line in self.cur_cor:
             file.write(line)
+
         file.write(endmodel)
         file.close()
 
-    def append_file(self, file_direction, n_model):
+    def Append_file(self, file_direction, n_model):
         file = open(file_direction, "a")
         startmodel = "MODEL " + str(n_model) + "\n"
         endmodel   = "ENDMDL\n"
@@ -160,19 +165,22 @@ def Calculate_pca():
     #-------------------------------------------------------------------------------------------------#
     #------ use the pdb template created earlier and write a new pdb file with avg coordinates -------#
     protein = Protein()
-    protein.extract_template( "template_selection.pdb" )
+    
+    protein.Extract_template( "template_selection.pdb" )
 
     # multiply by 10 to convert from nm (xtc) to angstrom (pdb)
     avg_angstrom = compute_average_structure( traj_pca.xyz ) * 10.000
 
-    protein.load_coor( avg_angstrom.reshape(-1,1) )
-    protein.write_file( "average_structure.pdb", 1 )
+    protein.Load_coor( avg_angstrom.reshape(-1,1) )
+    
+    protein.Write_file( "average_structure.pdb", 1 )
 
     #-------------------------------------------------------------------------------------------------#
     #------------------------------- write pca eigenvalues to file -----------------------------------#
     print( '\n\tWriting eigenvalues to file... ', end = '' )
 
     df_eigenval = pd.DataFrame( pca1.explained_variance_, columns = [ "#n var" ] )
+    
     df_eigenval.to_csv( r'eigenvalues.dat', index = True, sep = '\t', float_format = "%12.6f" )
 
     print( 'DONE')
@@ -182,6 +190,7 @@ def Calculate_pca():
     print( '\n\tWriting eigenvalues ratio to file... ', end = '' )
 
     df_eigenval_ratio = pd.DataFrame( pca1.explained_variance_ratio_, columns = [ "#n var" ] )
+    
     df_eigenval_ratio.to_csv( r'eigenvalues_ratio.dat', index = True, sep = '\t', float_format = "%12.6f" )
 
     print( 'DONE')
@@ -190,8 +199,9 @@ def Calculate_pca():
     #------------------------ write cumulative sum of pca eigenvalues to file ------------------------#
     print( '\n\tWriting eigenvalues cumulative sum to file... ', end = '' )
 
-    df_eigenval_cumsum = pd.DataFrame( np.cumsum( pca1.explained_variance_ratio_) , columns = [ "#n var" ] )
-    df_eigenval_cumsum.to_csv( r'eigenvalues_cumsum.dat', index = True, sep = '\t', float_format = "%12.6f" )
+    df_eigenval_csum = pd.DataFrame( np.cumsum( pca1.explained_variance_ratio_) , columns = [ "#n var" ] )
+    
+    df_eigenval_csum.to_csv( r'eigenvalues_csum.dat', index = True, sep = '\t', float_format = "%12.6f" )
 
     print( 'DONE')
 
@@ -202,6 +212,7 @@ def Calculate_pca():
     column_names = [ f"#pc{i:05d}" for i in range( 1, total_pc_output + 1 ) ]
 
     df = pd.DataFrame( reduced_cartesian[:,0:total_pc_output], columns = [ column_names ] ).reset_index(names="#t")
+
     df.to_csv( r'all_pcs.dat', sep = '\t', index=False, float_format = "%9.6f" )
 
     print( 'DONE')
@@ -239,7 +250,7 @@ def Write_eigenvectors():
 def Read_eigenvectors( total_pc_output ):
     global eigenvectors, avg_angstrom, df_eigenvectors_norm
 
-    check_file( "average_structure.pdb" )
+    Check_file( "average_structure.pdb" )
 
     template     = md.load( "average_structure.pdb", top = "average_structure.pdb" )
     avg_angstrom = template.xyz * 10.0
@@ -261,12 +272,12 @@ def Read_eigenvectors( total_pc_output ):
         tmp = np.array(' '.join(testsite_array[first:last]).split(), dtype=float)
 
         mask1 = np.ones(len(tmp), dtype=bool)
-        mask1[3::4] = False  # Set every 4th element to False
+        mask1[3::4] = False  # just set every 4th element to False
         filtered_arr = tmp[mask1].reshape(-1,3)
         eigenvectors[pca] = filtered_arr
         
         mask2 = np.zeros(len(tmp), dtype=bool)
-        mask2[3::4] = True  # Set every 4th element to True
+        mask2[3::4] = True  # or set every 4th element to True
         filtered_arr = tmp[mask2].reshape(-1,1)
         df_eigenvectors_norm[pca] = filtered_arr
 
@@ -276,15 +287,15 @@ def Write_pseudotrajs():
     global coords, filename, model_nr
 
     protein = Protein()
-    protein.extract_template( "template_selection.pdb" )
+    protein.Extract_template( "template_selection.pdb" )
 
     # pseudotraj_steps to negative displ. + avg structure + pseudotraj_steps to positive displ.
     total_frames = 2 * pseudotraj_steps + 1 
 
-    for pca in range(0,total_pc_output):
-        print( '\n\tWriting eigenvector %s to file... ' % pca , end = '' )
+    for pc in range(0,total_pc_output):
+        print( '\n\tWriting eigenvector %s to file... ' % pc , end = '' )
     
-        filename = "trj_eigenvector_" + str( pca ) + ".pdb"
+        filename = "trj_eigenvector_" + str( pc ) + ".pdb"
 
         try:
             os.remove( filename )
@@ -292,12 +303,12 @@ def Write_pseudotrajs():
             pass
 
         for steps in range( -pseudotraj_steps, pseudotraj_steps+1 ):
-            coords = avg_angstrom.reshape( -1, 1 ) + eigenvectors[pca].reshape( -1, 1 ) * steps * pseudotraj_scalf
-            protein.load_coor( coords )
+            coords = avg_angstrom.reshape( -1, 1 ) + eigenvectors[pc].reshape( -1, 1 ) * steps * pseudotraj_scalf
+            protein.Load_coor( coords )
             model_nr = steps + pseudotraj_steps + 1
-            bfactors = df_eigenvectors_norm[pca]
-            protein.set_bfactors( bfactors )
-            protein.append_file( filename, model_nr )
+            bfactors = df_eigenvectors_norm[pc]
+            protein.Set_bfactors( bfactors )
+            protein.Append_file( filename, model_nr )
 
         print( 'DONE' )
 
@@ -390,8 +401,8 @@ def Read_cmdline():
     parser_b.add_argument( '-t', '--trj', required = True, help = trj_help )
     parser_b.add_argument( '-f', '--fit', required = True, help = fit_help )
     parser_b.add_argument( '-s', '--sel', required = True, help = sel_help )
-    parser_b.add_argument( '-d', '--dsp', required = True, help = dsp_help, type = check_positive(float) )
-    parser_b.add_argument( '-n', '--num', required = True, help = num_help, type = check_positive(int) )
+    parser_b.add_argument( '-d', '--dsp', required = True, help = dsp_help, type = Check_positive(float) )
+    parser_b.add_argument( '-n', '--num', required = True, help = num_help, type = Check_positive(int) )
 
     parser_c = subparsers.add_parser( 'rescale', help = 'Requires: -d/--dsp, -n/--num' )
     parser_c.add_argument( '-d', '--dsp', required = True, help = dsp_help )

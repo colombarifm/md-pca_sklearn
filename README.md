@@ -93,12 +93,12 @@ Resulting data were validated using Gromacs 2024.4 *rmsf*, *covar* and *anaeig* 
 <table>
   <tr>
     <td align="center">
-      <img src="gmx_results/03_analysis/gmx_covariancemtx.png" alt="gromacs" height="350"/>
+      <img src="example/gmx_results/03_analysis/gmx_covariancemtx.png" alt="gromacs" height="350"/>
       <br>
       <em>Covariance matrix obtained with Gromacs tools.</em>
     </td>
     <td align="center">
-      <img src="sklearn_results/covar_matrix.png" alt="scikit-learn" height="350"/>
+      <img src="example/sklearn_results/covar_matrix.png" alt="scikit-learn" height="350"/>
       <br>
       <em>Covariance matrix obtained with this code.</em>
     </td>
@@ -114,7 +114,7 @@ Root mean-squared fluctuations were calculated for the MD trajectory using Groma
 <table>
   <tr>
     <td align="center">
-      <img src="all_plots/compare_rmsf.png" alt="rmsf values" height="300"/>
+      <img src="example/all_plots/compare_rmsf.png" alt="rmsf values" height="300"/>
       <br>
       <em>RMSF values for the MD trajectory obtained with both methods.</em>
     </td>
@@ -130,7 +130,7 @@ For each method, the eigenvalues (or the variance of each eigenvector) was also 
 <table>
   <tr>
     <td align="center">
-      <img src="all_plots/compare_variance.png" alt="eigenvalues" height="300"/>
+      <img src="example/all_plots/compare_variance.png" alt="eigenvalues" height="300"/>
       <br>
       <em>Resulting PCA eigenvalues obtained with both methods.</em>
     </td>
@@ -146,7 +146,7 @@ The projection of the first principal components is in perfect agreement in both
 <table>
   <tr>
     <td align="center">
-      <img src="all_plots/compare_projections.png" alt="projections" height="600"/>
+      <img src="example/all_plots/compare_projections.png" alt="projections" height="600"/>
       <br>
       <em>Projections of first three principal components obtained with both methods.</em>
     </td>
@@ -160,12 +160,12 @@ The projection of the first principal components is in perfect agreement in both
 <table>
   <tr>
     <td align="center">
-      <img src="all_plots/gmx_pc1.gif" alt="gromacs" height="300"/>
+      <img src="example/all_plots/gmx_pc1.gif" alt="gromacs" height="300"/>
       <br>
       <em>Scaled pseudotrajectory for PC1 obtained with Gromacs tools.</em>
     </td>
     <td align="center">
-      <img src="all_plots/skl_pc1.gif" alt="scikit-learn" height="300"/>
+      <img src="example/all_plots/skl_pc1.gif" alt="scikit-learn" height="300"/>
       <br>
       <em>Scaled pseudotrajectory for PC1 obtained with this code.</em>
     </td>
@@ -179,7 +179,7 @@ For each atom, the eigenvector norm was calculated and written to each pseudotra
 <table>
   <tr>
     <td align="center">
-      <img src="all_plots/skl_avg_eigenvectors.png" alt="scikit-learn" height="300"/>
+      <img src="example/all_plots/skl_avg_eigenvectors.png" alt="scikit-learn" height="300"/>
       <br>
       <em>Average structure from MD trajectory with atoms colored by eigenvector norm values (this code).</em>
     </td>
@@ -189,9 +189,10 @@ For each atom, the eigenvector norm was calculated and written to each pseudotra
 
 # Directory organization
 
-* [`gmx_results`](./gmx_results): MD trajectories and results obtained with gromacs tools (*rmsf*, *colvar* and *anaeig*)
-* [`sklearn_results`](./sklearn_results): Results obtained with this code
-* [`all_plots`](./all_plots): Python notebook with the plots shown here
+* [`example`](.example): Directory containing calculations for alanine dimer
+  * [`gmx_results`](./example/gmx_results): MD trajectories and results obtained with gromacs tools (*rmsf*, *colvar* and *anaeig*)
+  * [`sklearn_results`](./example/sklearn_results): Results obtained with this code
+  * [`all_plots`](./example/all_plots): Python notebook with the plots shown here
 
 
 
