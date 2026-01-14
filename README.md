@@ -156,7 +156,7 @@ The projection of the first principal components is in perfect agreement in both
 
 ## Pseudotrajectory for the first eigenvector
 
-<p align="center">
+<div align="center">
 <table>
   <tr>
     <td align="center">
@@ -171,7 +171,7 @@ The projection of the first principal components is in perfect agreement in both
     </td>
   </tr>
 </table>
-</p>
+</div>
 
 For each atom, the eigenvector norm was calculated and written to each pseudotrajectory. By selecting the central frame (which corresponded to the average structure), one can set the colors according to the B-factor field and get a static visualization of which atoms are more involved in each eigenvalue. In the example below, white color correspond to | v | = 0 and black color correspond to | v | = 0.6.
 
