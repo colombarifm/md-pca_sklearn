@@ -14,7 +14,7 @@ features were implemented:
 * The covariance matrix is written in both ASCII and PNG formats;
 * The RMSF (for the real trajectory) of the selection is obtained from the covariance matrix;
 
-Please check the results carefully. There is no warranties.
+Please check the results carefully. There is no warranty.
 
 # General instructions
 
