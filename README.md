@@ -23,9 +23,9 @@ Please check the results carefully. There is no warranty.
 ```bash 
    $ conda create -n pca_env python=3.9 
 
-   $ pip install -r requirements.txt
-
    $ conda activate pca_env
+   
+   $ pip install -r requirements.txt
 ```
 
 The code was tested with the following package versions:
