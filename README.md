@@ -36,7 +36,7 @@ numpy 1.24.4
 
 pandas 2.0.3
 
-sklearn 1.3.0
+scikit-learn 1.3.0
 
 mdtraj 1.9.9
 
